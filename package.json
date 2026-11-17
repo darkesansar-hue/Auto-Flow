@@ -1,0 +1,23 @@
+{
+  "name": "flowforge-platform",
+  "version": "1.0.0",
+  "description": "FlowForge — Original Visual Workflow Automation Platform",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "start": "node scripts/serve-production.js",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "node scripts/start-dev.js",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build",
+    "build": "npm run build:client && npm run build:server"
+  },
+  "keywords": ["automation", "visual-workflow", "dag", "flowforge"],
+  "author": "FlowForge Architecture Team",
+  "license": "MIT"
+}
